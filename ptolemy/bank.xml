@@ -1,0 +1,900 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE entity PUBLIC "-//UC Berkeley//DTD MoML 1//EN"
+        "http://ptolemy.eecs.berkeley.edu/xml/dtd/MoML_1.dtd">
+<entity name="bank" class="ptolemy.actor.TypedCompositeActor">
+    <property name="_createdBy" class="ptolemy.kernel.attributes.VersionAttribute" value="11.0.1">
+    </property>
+    <property name="SDF Director" class="ptolemy.domains.sdf.kernel.SDFDirector">
+        <property name="iterations" class="ptolemy.data.expr.Parameter" value="AUTO">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{710, 410}">
+        </property>
+    </property>
+    <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute"
+              value="{bounds={0, 23, 1680, 952}, maximized=true}">
+    </property>
+    <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1446, 842]">
+    </property>
+    <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="1.5625000000000067">
+    </property>
+    <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter"
+              value="{939.9953488372093, 553.4666242732558}">
+    </property>
+    <entity name="ModalModel" class="ptolemy.domains.modal.modal.ModalModel">
+        <property name="_tableauFactory" class="ptolemy.vergil.modal.modal.ModalTableauFactory">
+        </property>
+        <property name="_location" class="ptolemy.kernel.util.Location" value="{765.0, 560.0}">
+        </property>
+        <port name="input_0" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+        </port>
+        <port name="input_1" class="ptolemy.domains.modal.modal.ModalPort">
+            <property name="input"/>
+            <property name="defaultValue" class="ptolemy.data.expr.Parameter">
+            </property>
+        </port>
+        <entity name="_Controller" class="ptolemy.domains.modal.modal.ModalController">
+            <property name="_library" class="ptolemy.moml.LibraryAttribute">
+                <configure>
+                    <entity name="state library" class="ptolemy.kernel.CompositeEntity">
+                        <input source="ptolemy/configs/basicUtilities.xml"></input>
+                        <entity name="state" class="ptolemy.domains.modal.kernel.State">
+                            <property name="_centerName" class="ptolemy.kernel.util.Attribute"></property>
+                            <property name="_controllerFactory"
+                                      class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory"></property>
+                        </entity>
+                    </entity>
+                </configure>
+            </property>
+            <property name="_windowProperties" class="ptolemy.actor.gui.WindowPropertiesAttribute"
+                      value="{bounds={0, 23, 1680, 952}, maximized=true}">
+            </property>
+            <property name="_vergilSize" class="ptolemy.actor.gui.SizeAttribute" value="[1446, 841]">
+            </property>
+            <property name="_vergilZoomFactor" class="ptolemy.data.expr.ExpertParameter" value="0.8000000000000098">
+            </property>
+            <property name="_vergilCenter" class="ptolemy.data.expr.ExpertParameter"
+                      value="{1063.7162790697673, 363.4093023255814}">
+            </property>
+            <property name="username" class="ptolemy.data.expr.Parameter" value="&quot;user&quot;">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+                        <svg>
+                            <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+                        </svg>
+                    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{315.0, 175.0}">
+                </property>
+            </property>
+            <property name="password" class="ptolemy.data.expr.Parameter" value="&quot;pass&quot;">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+                        <svg>
+                            <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+                        </svg>
+                    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{315.0, 205.0}">
+                </property>
+            </property>
+            <property name="insert_user" class="ptolemy.data.expr.Parameter" value="&quot;&quot;">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+                        <svg>
+                            <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+                        </svg>
+                    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{315.0, 240.0}">
+                </property>
+            </property>
+            <property name="insert_pass" class="ptolemy.data.expr.Parameter" value="&quot;&quot;">
+                <property name="_hideName" class="ptolemy.kernel.util.SingletonAttribute">
+                </property>
+                <property name="_icon" class="ptolemy.vergil.icon.ValueIcon">
+                    <property name="_color" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 1.0, 1.0}">
+                    </property>
+                </property>
+                <property name="_smallIconDescription" class="ptolemy.kernel.util.SingletonConfigurableAttribute">
+                    <configure>
+                        <svg>
+                            <text x="20" style="font-size:14; font-family:SansSerif; fill:blue" y="20">-P-</text>
+                        </svg>
+                    </configure>
+                </property>
+                <property name="_editorFactory" class="ptolemy.vergil.toolbox.VisibleParameterEditorFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[315.0, 270.0]">
+                </property>
+            </property>
+            <property name="Annotation" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 0.0, 1.0}">
+                </property>
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Download PDF">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[800.0, 655.0]">
+                </property>
+            </property>
+            <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="false">
+            </property>
+            <property name="Rectangle" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="765.0, -42.499999999999986">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="350.0">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="145.00000000000003">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </property>
+            <property name="Rectangle2" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="1402.5, -45.0">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="455.0">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="130.0">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </property>
+            <property name="Rectangle3" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[1665.0, 145.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="415.00000000000006">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="165.0">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </property>
+            <property name="Annotation4" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 0.0, 1.0}">
+                </property>
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Daily expense on Internet">
+                </property>
+                <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="[-210.0, 90.0]">
+                    <property name="relativeTo" class="ptolemy.kernel.util.StringAttribute" value="Rectangle3">
+                    </property>
+                    <property name="relativeToElementName" class="ptolemy.kernel.util.StringAttribute" value="property">
+                    </property>
+                </property>
+            </property>
+            <property name="Annotation5" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 0.0, 1.0}">
+                </property>
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Daily Withdrawal Modification">
+                </property>
+                <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="[-222.5, -100.0]">
+                    <property name="relativeTo" class="ptolemy.kernel.util.StringAttribute" value="Rectangle2">
+                    </property>
+                    <property name="relativeToElementName" class="ptolemy.kernel.util.StringAttribute" value="property">
+                    </property>
+                </property>
+            </property>
+            <property name="Annotation2" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 0.0, 1.0}">
+                </property>
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Mail Modification">
+                </property>
+                <property name="_location" class="ptolemy.vergil.basic.RelativeLocation"
+                          value="[-170.0, -102.50000000000001]">
+                    <property name="relativeTo" class="ptolemy.kernel.util.StringAttribute" value="Rectangle">
+                    </property>
+                    <property name="relativeToElementName" class="ptolemy.kernel.util.StringAttribute" value="property">
+                    </property>
+                </property>
+            </property>
+            <property name="Rectangle4" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[1482.5, 395.0]">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="425.0">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="150.0">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </property>
+            <property name="Annotation3" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="textSize" class="ptolemy.data.expr.Parameter" value="14">
+                </property>
+                <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 0.0, 1.0}">
+                </property>
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Send Money">
+                </property>
+                <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="[-207.5, -105.0]">
+                    <property name="relativeTo" class="ptolemy.kernel.util.StringAttribute" value="Rectangle4">
+                    </property>
+                    <property name="relativeToElementName" class="ptolemy.kernel.util.StringAttribute" value="property">
+                    </property>
+                </property>
+            </property>
+            <property name="Rectangle5" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="1452.5, 632.5">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="505.0">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="155.0">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </property>
+            <property name="Annotation6" class="ptolemy.vergil.kernel.attributes.TextAttribute">
+                <property name="textColor" class="ptolemy.actor.gui.ColorAttribute" value="{0.0, 0.0, 0.0, 1.0}">
+                </property>
+                <property name="text" class="ptolemy.kernel.util.StringAttribute" value="Payment confirmation">
+                </property>
+                <property name="_location" class="ptolemy.vergil.basic.RelativeLocation" value="[-252.5, 87.5]">
+                    <property name="relativeTo" class="ptolemy.kernel.util.StringAttribute" value="Rectangle5">
+                    </property>
+                    <property name="relativeToElementName" class="ptolemy.kernel.util.StringAttribute" value="property">
+                    </property>
+                </property>
+            </property>
+            <property name="Rectangle6" class="ptolemy.vergil.kernel.attributes.RectangleAttribute">
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{840.0, 690.0}">
+                </property>
+                <property name="width" class="ptolemy.data.expr.Parameter" value="225.0">
+                </property>
+                <property name="height" class="ptolemy.data.expr.Parameter" value="204.99999999999997">
+                </property>
+                <property name="centered" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </property>
+            <port name="input_0" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{200.0, -10.0}">
+                </property>
+            </port>
+            <port name="input_1" class="ptolemy.domains.modal.modal.RefinementPort">
+                <property name="input"/>
+                <property name="defaultValue" class="ptolemy.data.expr.Parameter" value="">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{205.0, 35.0}">
+                </property>
+            </port>
+            <entity name="init" class="ptolemy.domains.modal.kernel.State">
+                <property name="isInitialState" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{205.0, 385.0}">
+                </property>
+            </entity>
+            <entity name="login" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[430.0, 385.0]">
+                </property>
+            </entity>
+            <entity name="manage_money" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="{840.0, 385.0}">
+                </property>
+            </entity>
+            <entity name="my_account" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[841.5, 120.18287947773935]">
+                </property>
+            </entity>
+            <entity name="modify_mail" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[836.5, -24.817120522260645]">
+                </property>
+            </entity>
+            <entity name="confirm_pass" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[651.5, -24.817120522260645]">
+                </property>
+            </entity>
+            <entity name="manage_card" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[1295.0, 120.0]">
+                </property>
+            </entity>
+            <entity name="send_money" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[1328.0, 386.03724310952305]">
+                </property>
+            </entity>
+            <entity name="confirm_send" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[1608.0, 386.03724310952305]">
+                </property>
+            </entity>
+            <entity name="daily_withdrawal" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location"
+                          value="[1293.4566650390625, -14.751115580139334]">
+                </property>
+            </entity>
+            <entity name="confirm_withdrawal" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location"
+                          value="[1533.4566650390625, -14.751115580139334]">
+                </property>
+            </entity>
+            <entity name="daily_internet" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location"
+                          value="[1521.1472232862545, 121.39961996902639]">
+                </property>
+            </entity>
+            <entity name="transactions_history" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[840.0, 615.0]">
+                </property>
+            </entity>
+            <entity name="view_transaction" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location"
+                          value="[839.7775850419067, 697.9760042876005]">
+                </property>
+            </entity>
+            <entity name="pay" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[1325.0, 595.0]">
+                </property>
+            </entity>
+            <entity name="confirm_internet" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location"
+                          value="[1794.9584862249005, 120.89961996902639]">
+                </property>
+            </entity>
+            <entity name="confirm_pay" class="ptolemy.domains.modal.kernel.State">
+                <property name="_hideName" class="ptolemy.data.expr.SingletonParameter" value="true">
+                </property>
+                <property name="_controllerFactory"
+                          class="ptolemy.vergil.modal.modal.HierarchicalStateControllerFactory">
+                </property>
+                <property name="_location" class="ptolemy.kernel.util.Location" value="[1635.0, 595.0]">
+                </property>
+            </entity>
+            <relation name="relation" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_user=&quot;&quot;;&#10;insert_pass=&quot;&quot;">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.005664348094522414">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="5.731770008612965E-4">
+                </property>
+            </relation>
+            <relation name="relation2" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute"
+                          value="(insert_user==username) &amp;&amp; (insert_pass==password)">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.0031447373909807737">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.001629779268147789">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation3" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.006716678731795451">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.6087093494061693">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation4" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=&quot;&quot;">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.41479119397089037">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.6750557250865923">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation5" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute"
+                          value="insert_pass==password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.31188974097414973">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="3.0662705721600965">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation6" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.03016720031973797">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.004360546939352822">
+                </property>
+            </relation>
+            <relation name="relation7" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=&quot;&quot;">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.11888961709027257">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.003507360356933228">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation8" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=&quot;&quot;">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.10879687546050809">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.22050155524835208">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation9" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute"
+                          value="insert_pass==password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.002944930692355939">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.3097453974079256E-4">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation10" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.5975160890261056">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.113550980863002">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+            </relation>
+            <relation name="relation11" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.26746800252824776">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.5734090604728075">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation12" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.20000302271382345">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.137714496872233">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation13" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.48415882085087847">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.600171877965956">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation14" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=&quot;&quot;">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.012146393830313506">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.5545678401041316">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation15" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute"
+                          value="insert_pass==password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.8130261508839635">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.039993919103749234">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation16" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.0031447373909807737">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.141534419280023">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+            </relation>
+            <relation name="relation17" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="1.0853526356524155">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.6958922430119603">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation18" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=&quot;&quot;">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.5351536842988917">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.06045927948379136">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation19" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.0036979055821378566">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.1329724708064965">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation20" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.24174128700489">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="1.5438852201881674">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="false">
+                    <display name="default"/>
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation21" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.23070791008158373">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.9594635695795297">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation22" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.01724573706946043">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.7561743625895399">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="error" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+            </relation>
+            <relation name="relation23" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="1.4041359340154331">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-1.3246849807850836">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation24" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.4946394321370855">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.028920534080094155">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation25" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=&quot;&quot;">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.29477922986440175">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.3083145081818063">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation26" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute"
+                          value="insert_pass==password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.0268367257320859">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation27" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="-0.00248952564173431">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.1414537523562873">
+                </property>
+            </relation>
+            <relation name="relation28" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.09401783999183141">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.820807264246806">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation29" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="guardExpression" class="ptolemy.kernel.util.StringAttribute"
+                          value="insert_pass==password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.016273781546278412">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="4.3281475680606135E-4">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation30" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.6283185307179586">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.1023630221842264">
+                </property>
+            </relation>
+            <relation name="relation32" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass = input_0">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.7718893693517965">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.03199276921331946">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation33" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.4104757240216315">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.30949350104216133">
+                </property>
+                <property name="defaultTransition" class="ptolemy.data.expr.Parameter" value="false">
+                    <display name="default"/>
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation34" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.079475985048133">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.8060387034323846">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation35" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.394764160485573">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-2.771683599617546">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation36" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="0.16732200609238126">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="2.925606945609119">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation37" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.227562067221547">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-0.67024316754834">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <relation name="relation38" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_pass=password">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.238417412098548">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="-3.956999823759382">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+                <property name="history" class="ptolemy.data.expr.Parameter" value="false">
+                </property>
+            </relation>
+            <relation name="relation31" class="ptolemy.domains.modal.kernel.Transition">
+                <property name="setActions" class="ptolemy.domains.modal.kernel.CommitActionsAttribute"
+                          value="insert_user = input_1">
+                </property>
+                <property name="exitAngle" class="ptolemy.data.expr.Parameter" value="2.646413240911541">
+                </property>
+                <property name="gamma" class="ptolemy.data.expr.Parameter" value="0.015708026174218893">
+                </property>
+                <property name="nondeterministic" class="ptolemy.data.expr.Parameter" value="true">
+                </property>
+            </relation>
+            <link port="init.outgoingPort" relation="relation"/>
+            <link port="login.incomingPort" relation="relation"/>
+            <link port="login.incomingPort" relation="relation32"/>
+            <link port="login.incomingPort" relation="relation31"/>
+            <link port="login.outgoingPort" relation="relation2"/>
+            <link port="login.outgoingPort" relation="relation32"/>
+            <link port="login.outgoingPort" relation="relation31"/>
+            <link port="manage_money.incomingPort" relation="relation2"/>
+            <link port="manage_money.incomingPort" relation="relation13"/>
+            <link port="manage_money.incomingPort" relation="relation21"/>
+            <link port="manage_money.incomingPort" relation="relation28"/>
+            <link port="manage_money.incomingPort" relation="relation36"/>
+            <link port="manage_money.outgoingPort" relation="relation3"/>
+            <link port="manage_money.outgoingPort" relation="relation8"/>
+            <link port="manage_money.outgoingPort" relation="relation20"/>
+            <link port="manage_money.outgoingPort" relation="relation25"/>
+            <link port="my_account.incomingPort" relation="relation3"/>
+            <link port="my_account.incomingPort" relation="relation11"/>
+            <link port="my_account.incomingPort" relation="relation12"/>
+            <link port="my_account.outgoingPort" relation="relation4"/>
+            <link port="my_account.outgoingPort" relation="relation7"/>
+            <link port="my_account.outgoingPort" relation="relation13"/>
+            <link port="modify_mail.incomingPort" relation="relation4"/>
+            <link port="modify_mail.incomingPort" relation="relation6"/>
+            <link port="modify_mail.incomingPort" relation="relation35"/>
+            <link port="modify_mail.outgoingPort" relation="relation5"/>
+            <link port="modify_mail.outgoingPort" relation="relation11"/>
+            <link port="modify_mail.outgoingPort" relation="relation35"/>
+            <link port="confirm_pass.incomingPort" relation="relation5"/>
+            <link port="confirm_pass.outgoingPort" relation="relation6"/>
+            <link port="manage_card.incomingPort" relation="relation7"/>
+            <link port="manage_card.incomingPort" relation="relation17"/>
+            <link port="manage_card.incomingPort" relation="relation19"/>
+            <link port="manage_card.outgoingPort" relation="relation12"/>
+            <link port="manage_card.outgoingPort" relation="relation14"/>
+            <link port="manage_card.outgoingPort" relation="relation18"/>
+            <link port="send_money.incomingPort" relation="relation8"/>
+            <link port="send_money.incomingPort" relation="relation34"/>
+            <link port="send_money.incomingPort" relation="relation10"/>
+            <link port="send_money.outgoingPort" relation="relation9"/>
+            <link port="send_money.outgoingPort" relation="relation34"/>
+            <link port="send_money.outgoingPort" relation="relation36"/>
+            <link port="confirm_send.incomingPort" relation="relation9"/>
+            <link port="confirm_send.outgoingPort" relation="relation10"/>
+            <link port="daily_withdrawal.incomingPort" relation="relation14"/>
+            <link port="daily_withdrawal.incomingPort" relation="relation16"/>
+            <link port="daily_withdrawal.incomingPort" relation="relation38"/>
+            <link port="daily_withdrawal.outgoingPort" relation="relation15"/>
+            <link port="daily_withdrawal.outgoingPort" relation="relation17"/>
+            <link port="daily_withdrawal.outgoingPort" relation="relation38"/>
+            <link port="confirm_withdrawal.incomingPort" relation="relation15"/>
+            <link port="confirm_withdrawal.outgoingPort" relation="relation16"/>
+            <link port="daily_internet.incomingPort" relation="relation18"/>
+            <link port="daily_internet.incomingPort" relation="relation30"/>
+            <link port="daily_internet.incomingPort" relation="relation37"/>
+            <link port="daily_internet.outgoingPort" relation="relation19"/>
+            <link port="daily_internet.outgoingPort" relation="relation29"/>
+            <link port="daily_internet.outgoingPort" relation="relation37"/>
+            <link port="transactions_history.incomingPort" relation="relation20"/>
+            <link port="transactions_history.incomingPort" relation="relation23"/>
+            <link port="transactions_history.outgoingPort" relation="relation21"/>
+            <link port="transactions_history.outgoingPort" relation="relation22"/>
+            <link port="view_transaction.incomingPort" relation="relation22"/>
+            <link port="view_transaction.incomingPort" relation="relation24"/>
+            <link port="view_transaction.outgoingPort" relation="relation23"/>
+            <link port="view_transaction.outgoingPort" relation="relation24"/>
+            <link port="pay.incomingPort" relation="relation25"/>
+            <link port="pay.incomingPort" relation="relation27"/>
+            <link port="pay.incomingPort" relation="relation33"/>
+            <link port="pay.outgoingPort" relation="relation26"/>
+            <link port="pay.outgoingPort" relation="relation28"/>
+            <link port="pay.outgoingPort" relation="relation33"/>
+            <link port="confirm_internet.incomingPort" relation="relation29"/>
+            <link port="confirm_internet.outgoingPort" relation="relation30"/>
+            <link port="confirm_pay.incomingPort" relation="relation26"/>
+            <link port="confirm_pay.outgoingPort" relation="relation27"/>
+        </entity>
+        <relation name="input_0Relation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <relation name="input_1Relation" class="ptolemy.actor.TypedIORelation">
+            <property name="width" class="ptolemy.data.expr.Parameter" value="Auto">
+            </property>
+        </relation>
+        <link port="input_0" relation="input_0Relation"/>
+        <link port="input_1" relation="input_1Relation"/>
+        <link port="_Controller.input_0" relation="input_0Relation"/>
+        <link port="_Controller.input_1" relation="input_1Relation"/>
+    </entity>
+</entity>
