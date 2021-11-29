@@ -1,4 +1,4 @@
-# FATE# FATE
+# FATE
 Deep RL algorithms require fine tuning, which is expensive on real apps. Therefore, we developed FATE, 
 a simulation environment for fast Android testing. FATE models only the navigation constraints of Android apps, 
 so it can be used to efficiently compare alternative testing algorithms and to quickly tune their corresponding 
